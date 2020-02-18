@@ -1,0 +1,30 @@
+digraph G {
+  start [image="/home/bhemanth/Projects/Images/github.png", label=""];
+  end [image="/home/bhemanth/Projects/Images/aws-logos.png", label=""];
+	subgraph cluster_0 {
+		style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+    a0 [shape=circle, image="/home/bhemanth/Projects/Images/jenkinss.png", label=""];
+    a1 [shape=circle, image="/home/bhemanth/Projects/Images/dockers.png", label=""];
+    a2 [shape=circle, image="/home/bhemanth/Projects/Images/selenium-logos.png", label=""];
+		a0 -> a1 -> a2;
+		label = "Master Branch";
+	}
+
+	subgraph cluster_1 {
+		node [style=filled];
+    b0 [shape=circle, image="/home/bhemanth/Projects/Images/jenkinss.png", label=""];
+    b1 [shape=circle, image="/home/bhemanth/Projects/Images/dockers.png", label=""];
+    b2 [shape=circle, image="/home/bhemanth/Projects/Images/selenium-logos.png", label=""];
+		b0 -> b1 -> b2;
+		label = "Develop Branch";
+		color=blue
+	}
+	start -> a0;
+	start -> b0;
+	a2 -> end;
+
+	start [shape=doublecircle];
+	end [shape=tripleoctagon];
+}

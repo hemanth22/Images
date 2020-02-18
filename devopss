@@ -1,0 +1,25 @@
+digraph G {
+
+	subgraph cluster_0 {
+		style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		Master -> Jenkins -> "Selenium\nHeadless\nTesting" -> "Deploy\nto\nProduction";
+		label = "Production";
+	}
+
+	subgraph cluster_1 {
+		node [style=filled];
+    "Jenkins CI" [image="/home/bhemanth/Projects/Images/jenkins.png", label=""];
+		Devel -> "Jenkins CI" -> "Selenium\nHeadless\nTest";
+		label = "Testing Environment";
+		color=blue
+	}
+	Github -> Master;
+	Github -> Devel;
+"Deploy\nto\nProduction" -> end;
+"Selenium\nHeadless\nTest" -> end;
+
+	Github [shape=Mdiamond];
+	end [shape=Msquare];
+}
