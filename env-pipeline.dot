@@ -1,0 +1,25 @@
+digraph G {
+rankdir=LR
+a0 [shape=doublecircle, image="/home/bhemanth/Projects/Images/github.png", label=""];
+a1 [shape=box, image="/home/bhemanth/Projects/Images/TravisCI.png", label=""];
+a2 [image="/home/bhemanth/Projects/Images/ansiblesss.png", label=""];
+a3 [shape=ellipse, image="/home/bhemanth/Projects/Images/aws-logos.png", label=""];
+a4 [shape=tripleoctagon, image="/home/bhemanth/Projects/Images/amazon-ec2s.png", label=""];
+a5 [shape=doubleoctagon, image="/home/bhemanth/Projects/Images/amazon-ec2s.png", label=""];
+a6 [shape=ellipse, image="/home/bhemanth/Projects/Images/amazon-ec2s.png", label=""];
+a7 [shape=circle, image="/home/bhemanth/Projects/Images/Puppet-logos.png", label=""]
+a8 [shape=circle, image="/home/bhemanth/Projects/Images/jenkinss.png", label=""];
+a9 [shape=circle, image="/home/bhemanth/Projects/Images/dockers.png", label=""];
+a10 [shape=circle, image="/home/bhemanth/Projects/Images/selenium-logos.png", label=""];
+
+a0 -> a1 -> a2 -> a3 -> a4;
+a3 -> a5;
+a3 -> a6;
+a4 -> a8;
+a4 -> a7;
+a5 -> a7;
+a5 -> a9;
+a5 -> a10;
+a6 -> a7;
+a6 -> a9;
+}
